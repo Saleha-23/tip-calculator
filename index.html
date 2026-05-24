@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gratuity — Tip Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <main class="layout">
+
+    <header class="header">
+      <div class="logo-mark" aria-hidden="true">◈</div>
+      <h1 class="wordmark">Gratuity</h1>
+      <p class="tagline">Bill Splitter & Tip Calculator</p>
+    </header>
+
+    <div class="card inputs-card" role="region" aria-label="Input fields">
+
+      <!-- Bill Amount -->
+      <div class="field-group" id="group-bill">
+        <label class="field-label" for="bill">
+          Bill Amount
+          <span class="currency-badge">PKR</span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix" aria-hidden="true">Rs</span>
+          <input
+            id="bill"
+            class="input"
+            type="number"
+            inputmode="decimal"
+            placeholder="0.00"
+            min="0"
+            step="0.01"
+            autocomplete="off"
+            aria-describedby="bill-error"
+            aria-invalid="false"
+          />
+        </div>
+        <p class="field-error" id="bill-error" role="alert" aria-live="polite"></p>
+      </div>
+
+      <!-- Tip Percentage -->
+      <div class="field-group" id="group-tip">
+        <label class="field-label" for="tip-custom">Tip Percentage</label>
+        <div class="tip-presets" role="group" aria-label="Tip percentage presets">
+          <button class="preset-btn" data-tip="10" type="button" aria-pressed="false">10%</button>
+          <button class="preset-btn" data-tip="15" type="button" aria-pressed="false">15%</button>
+          <button class="preset-btn" data-tip="20" type="button" aria-pressed="false">20%</button>
+          <button class="preset-btn" data-tip="25" type="button" aria-pressed="false">25%</button>
+        </div>
+        <div class="input-wrap">
+          <input
+            id="tip-custom"
+            class="input"
+            type="number"
+            inputmode="decimal"
+            placeholder="Custom %"
+            min="0"
+            max="100"
+            step="0.1"
+            autocomplete="off"
+            aria-describedby="tip-error"
+            aria-invalid="false"
+          />
+          <span class="input-suffix" aria-hidden="true">%</span>
+        </div>
+        <p class="field-error" id="tip-error" role="alert" aria-live="polite"></p>
+      </div>
+
+      <!-- Number of People -->
+      <div class="field-group" id="group-people">
+        <label class="field-label" for="people">Number of People</label>
+        <div class="input-wrap stepper-wrap">
+          <button class="stepper-btn" id="decrement" type="button" aria-label="Decrease number of people">−</button>
+          <input
+            id="people"
+            class="input input-center"
+            type="number"
+            inputmode="numeric"
+            placeholder="1"
+            min="1"
+            max="999"
+            step="1"
+            value="1"
+            autocomplete="off"
+            aria-describedby="people-error"
+            aria-invalid="false"
+          />
+          <button class="stepper-btn" id="increment" type="button" aria-label="Increase number of people">+</button>
+        </div>
+        <p class="field-error" id="people-error" role="alert" aria-live="polite"></p>
+      </div>
+
+      <button class="reset-btn" id="reset" type="button" aria-label="Reset all fields to default values">
+        <span class="reset-icon" aria-hidden="true">↺</span> Reset
+      </button>
+    </div>
+
+    <!-- Output Panel -->
+    <div class="card output-card" role="region" aria-label="Calculation results" aria-live="polite" aria-atomic="true">
+      <div class="output-header">
+        <span class="output-eyebrow">Summary</span>
+        <div class="divider-line" aria-hidden="true"></div>
+      </div>
+
+      <div class="output-grid">
+        <div class="output-row">
+          <span class="output-label">Tip Amount</span>
+          <span class="output-value" id="out-tip">Rs —</span>
+        </div>
+        <div class="output-row">
+          <span class="output-label">Grand Total</span>
+          <span class="output-value" id="out-total">Rs —</span>
+        </div>
+        <div class="output-divider" aria-hidden="true"></div>
+        <div class="output-row output-row--hero">
+          <span class="output-label">Per Person</span>
+          <span class="output-value output-value--hero" id="out-per-person">Rs —</span>
+        </div>
+      </div>
+
+      <div class="rounding-note" id="rounding-note" aria-live="polite"></div>
+
+      <div class="split-breakdown" id="split-breakdown" aria-label="Per person breakdown" role="list">
+        <!-- populated by JS when people > 1 -->
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>Amounts in Pakistani Rupees (PKR) &middot; Rounding policy: ceiling to nearest paisa</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
