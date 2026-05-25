@@ -5,14 +5,14 @@
 ## 1. How to run
 
 ```bash
-git clone https://github.com/your-username/tip-calculator.git
+git clone https://github.com/Saleha-23/tip-calculatort
 cd tip-calculator
 open index.html
 ```
 
 No installs, no build. Just open the file.
 
-Live at: **https://your-username.github.io/tip-calculator**
+Live at: **https://github.com/Saleha-23/tip-calculator**
 
 ---
 
