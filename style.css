@@ -1,24 +1,24 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-  --bg:           #0e0e0f;
-  --surface:      #161618;
-  --surface-2:    #1e1e21;
-  --border:       rgba(255,255,255,0.07);
-  --border-focus: rgba(197,160,87,0.6);
+  --bg:           #FAF7F0;
+  --surface:      #F2EDE1;
+  --surface-2:    #EAE3D4;
+  --border:       rgba(0,0,0,0.08);
+  --border-focus: rgba(139,115,85,0.5);
 
-  --gold:         #c5a057;
-  --gold-light:   #e8c97e;
-  --gold-dim:     rgba(197,160,87,0.15);
+  --gold:         #8B7355;
+  --gold-light:   #5a3e1b;
+  --gold-dim:     rgba(139,115,85,0.12);
 
-  --text:         #f0ede6;
-  --text-muted:   #8a8781;
-  --text-faint:   #4a4845;
+  --text:         #000000;
+  --text-muted:   #4a4845;
+  --text-faint:   #8a8781;
 
-  --red:          #d97469;
-  --red-dim:      rgba(217,116,105,0.12);
+  --red:          #b85450;
+  --red-dim:      rgba(184,84,80,0.1);
 
-  --green:        #6bba8a;
-
+  --green:        #4a8c63;
+c
   --radius:       12px;
   --radius-sm:    8px;
 
@@ -178,7 +178,7 @@ body {
   font-size: 0.55rem;
   background: var(--gold-dim);
   color: var(--gold);
-  border: 1px solid rgba(197,160,87,0.2);
+  border: 1px solid rgba(139,115,85,0.2);
   padding: 0.1em 0.45em;
   border-radius: 4px;
   letter-spacing: 0.08em;
@@ -197,7 +197,7 @@ body {
 
 .input-wrap:focus-within {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(197,160,87,0.08);
+  box-shadow: 0 0 0 3px rgba(139,115,85,0.08);
 }
 
 .input-wrap.has-error {
@@ -212,7 +212,7 @@ body {
   padding: 0 0.85rem;
   font-size: 0.8rem;
   color: var(--gold);
-  background: rgba(197,160,87,0.06);
+  background: rgba(139,115,85,0.06);
   border-right: 1px solid var(--border);
   letter-spacing: 0.03em;
   flex-shrink: 0;
@@ -235,8 +235,6 @@ body {
   padding: 0.75rem 1rem;
   width: 100%;
   min-width: 0;
-
-  /* hide spinners */
   -moz-appearance: textfield;
 }
 
@@ -276,8 +274,8 @@ body {
 }
 
 .preset-btn:hover {
-  border-color: rgba(197,160,87,0.3);
-  color: var(--gold-light);
+  border-color: rgba(139,115,85,0.3);
+  color: var(--gold);
   background: var(--gold-dim);
 }
 
@@ -285,9 +283,9 @@ body {
 .preset-btn[aria-pressed="true"] {
   background: var(--gold-dim);
   border-color: var(--gold);
-  color: var(--gold-light);
+  color: var(--gold);
   font-weight: 500;
-  box-shadow: inset 0 0 12px rgba(197,160,87,0.08);
+  box-shadow: inset 0 0 12px rgba(139,115,85,0.08);
 }
 
 .preset-btn:focus-visible {
@@ -316,7 +314,7 @@ body {
 }
 
 .stepper-btn:hover { background: var(--gold-dim); }
-.stepper-btn:active { background: rgba(197,160,87,0.25); }
+.stepper-btn:active { background: rgba(139,115,85,0.2); }
 .stepper-btn:disabled { color: var(--text-faint); cursor: not-allowed; }
 .stepper-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 
@@ -368,7 +366,7 @@ body {
 
 .reset-btn:hover {
   border-color: var(--border-focus);
-  color: var(--gold-light);
+  color: var(--gold);
   background: var(--gold-dim);
 }
 
@@ -466,7 +464,7 @@ body {
 
 @keyframes pop {
   0%   { transform: scale(1); }
-  45%  { transform: scale(1.04); color: var(--gold-light); }
+  45%  { transform: scale(1.04); color: var(--gold); }
   100% { transform: scale(1); }
 }
 
@@ -513,8 +511,7 @@ body {
   padding: 0.4rem 0;
   font-size: 0.78rem;
   color: var(--text-muted);
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-  role: listitem;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .split-item-person { color: var(--text-faint); }
@@ -546,7 +543,7 @@ body {
   right: -60px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(197,160,87,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139,115,85,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
