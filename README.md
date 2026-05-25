@@ -5,7 +5,7 @@ Single-screen tip calculator. No frameworks, no build step, just HTML + CSS + JS
 ## Run it locally
 
 ```bash
-git clone https://github.com/your-username/tip-calculator.git
+git clone https://github.com/Saleha-23/tip-calculator
 cd tip-calculator
 open index.html
 ```
@@ -22,7 +22,7 @@ Then go to `http://localhost:3000`.
 
 ## Live demo
 
-https://your-username.github.io/tip-calculator
+https://github.com/Saleha-23/tip-calculator
 
 ## Files
 
