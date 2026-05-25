@@ -1,42 +1,33 @@
 # Tip Calculator & Bill Splitter
 
-A single-screen tip calculator and bill splitter — live-updating, keyboard-accessible, and built in vanilla HTML/CSS/JS with zero dependencies.
+Single-screen tip calculator. No frameworks, no build step, just HTML + CSS + JS.
 
-## Run locally
-
-No build step, no install required.
+## Run it locally
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/your-username/tip-calculator.git
 cd tip-calculator
 open index.html
 ```
 
-Or with a local server (recommended to avoid any browser file-protocol quirks):
+That's it. If `open` doesn't work on your system, just drag `index.html` into a browser.
+
+If you want a proper local server:
 
 ```bash
 npx serve .
-# then open http://localhost:3000
 ```
 
-Python alternative:
+Then go to `http://localhost:3000`.
 
-```bash
-python3 -m http.server 8080
-# then open http://localhost:8080
-```
+## Live demo
 
-## Deployed URL
+https://your-username.github.io/tip-calculator
 
-[https://your-deployment-url.vercel.app](https://your-deployment-url.vercel.app)
-
-## Project structure
+## Files
 
 ```
-tip-calculator/
-├── index.html     # markup
-├── style.css      # all styles
-├── main.js        # all logic
-├── README.md
-└── ANSWERS.md
+index.html   — structure
+style.css    — all styles
+main.js      — all logic
 ```
